@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+</head>
+<body>
+    <div>
+        <h1>Guess the Number</h1>
+        <p>Enter a number between 1 and 100:</p>
+        <p>You have 10 attempts to guess the correct number.</p>
+        <form>
+            <input type="number" id="userInput" min="1" max="100">
+            <button type="button" id="submitBtn">Submit</button>
+            <button type="button" id="newGameBtn">Start New Game</button>
+            <p id="message"></p>
+            <p>Previous guess: <span id="previousGuess"></span></p>
+            <p>Remaining attempts: <span id="remainingAttempts">10</span></p>
+        </form>
+    </div>
+</body>
+<script src="guess_number_scrpt.js"></script>
+</html>

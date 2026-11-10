@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background Changer</title>
+</head>
+<style>
+    .button{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 10px;
+        border: black solid 1px;
+        text-align: center;
+    }
+    #white{
+        background-color: white;
+    }
+    #Blue{
+        background-color: blue;
+    }
+    #Black{
+        background-color: black;
+    }
+    #Red{
+        background-color: red;
+    }
+</style>
+<body>
+    <h1 style="text-align: center;">Background Changer</h1>
+    <div style="display: flex; justify-content: center;">
+        <button class = "button "id="white"></button>
+        <button class = "button "id="Blue"></button>
+        <button class = "button "id="Black"></button>
+        <button class = "button "id="Red"></button>
+    </div>
+</body>
+<script>
+    bg = document.querySelector("body");
+    buttons = document.querySelectorAll(".button");
+    buttons.forEach(button => {
+        console.log(button.id)
+        if (button.id == "white"){
+            button.addEventListener("click", (e) => {
+                console.log(e.target.id)
+                bg.style.backgroundColor = "white";
+                title = document.querySelector("h1");
+                title.style.color = "Black";
+            })
+        }
+        else if (button.id == "Blue"){
+            button.addEventListener("click", () => {
+                bg.style.backgroundColor = "blue";
+            })
+        }
+        else if (button.id == "Black"){
+            button.addEventListener("click", () => {
+                bg.style.backgroundColor = "black";
+                button.style.border = "white solid 1px";
+                title = document.querySelector("h1");
+                title.style.color = "white";
+            })
+        }
+        else if (button.id == "Red"){
+            button.addEventListener("click", () => {
+                bg.style.backgroundColor = "red";
+            })
+        }
+    })
+</script>>
+</html>

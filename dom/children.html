@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="days">
+        <h1> Days </h1>
+        <p>Monday</p>
+        <p>Tuesday</p>
+        <p>Wednesday</p>
+        <p>Thursday</p>
+        <p>Friday</p>
+        <p>Saturday</p>
+        <p>Sunday</p>
+    </div>
+    <div class="other-content">
+        <p class="name">Some other content</p>
+        <p class="name">Ali</p>
+        <p class="name">Noah</p>
+        <p class="name">Emma</p>
+        <p class="name">Olivia</p>
+        <p class="name">William</p>
+        <p class="name">James</p>
+    </div>
+</body>
+<script>
+    const days = document.getElementById("days");
+    console.log(days.innerText);
+
+    const names = document.querySelectorAll(".other-content p");
+    secname = names[1];
+    secname.style.color = "red";
+    names.forEach((name) => {
+        console.log(name.innerText);
+    });
+    console.log(names.children);
+</script>
+</html>

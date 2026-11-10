@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div id = "parent">
+        <img src="https://images.pexels.com/photos/40437110/pexels-photo-40437110.jpeg" alt="nothing" width="300" height="300" id="img1">
+        <br>
+        <img src="https://images.pexels.com/photos/39381993/pexels-photo-39381993.jpeg" alt="nothing" width="300" height="300" id="img2">
+        <br>
+        <img src="https://images.pexels.com/photos/6362249/pexels-photo-6362249.jpeg" alt="nothing" width="300" height="300" id="img3">
+  
+    </div>
+</body>
+<script>
+    img1 =document.getElementById("img1");
+    img2 =document.getElementById("img2");
+    img3 = document.querySelector("#img3");
+    parent = document.getElementById("parent");
+
+    img1.addEventListener("click", function(e) {
+        window.location.href = "https://www.pexels.com/photo/40437110/";
+        console.log("Image 1 clicked");
+        e.stopPropagation();
+    }, true);
+    parent.addEventListener("click", function(event) {
+        // if (event.target.tagName === "IMG") {
+        //     console.log("Image clicked: " + event.target.id);
+        // }
+        console.log("Parent clicked");
+    });
+    img2.addEventListener("click", function(e) {
+        window.location.href = "https://www.youtube.com/";
+        console.log("Image 2 clicked");
+        // e.stopPropagation();
+    }, true);
+    img3.addEventListener("click", function(e) {
+        window.location.href = "https://www.google.com/";
+        console.log("Image 3 clicked");
+        // e.stopPropagation();
+    }, true);
+</script>
+</html>
